@@ -8,7 +8,7 @@
         allows this fragment to work with 9.1.2 and older databases.
      -->
     <sql id="escape">
-        escape E'\\'
+        escape '\'
     </sql>
 
 </mapper>

@@ -12,9 +12,10 @@ create table ACT_HI_PROCINST (
     SUPER_PROCESS_INSTANCE_ID_ varchar(64),
     DELETE_REASON_ lvarchar(4000),
     primary key (ID_),
-    unique (PROC_INST_ID_),
-    unique (PROC_DEF_ID_, BUSINESS_KEY_)
+    unique (PROC_INST_ID_)
 );
+--TODO - remove unique constraint for business_key - not using . because Activiti not auto generated if null
+--unique (PROC_DEF_ID_, BUSINESS_KEY_)
 
 create table ACT_HI_ACTINST (
     ID_ varchar(64) not null,

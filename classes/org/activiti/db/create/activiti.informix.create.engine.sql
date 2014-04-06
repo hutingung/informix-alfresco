@@ -63,9 +63,10 @@ create table ACT_RU_EXECUTION (
   IS_EVENT_SCOPE_ boolean,
   SUSPENSION_STATE_ integer,
   CACHED_ENT_STATE_ integer,
-    primary key (ID_),
-    unique (PROC_DEF_ID_, BUSINESS_KEY_)
+    primary key (ID_)
 );
+--Remove uniqueness on business_key_ because default activiti not generated. TODO - not a good solution but working if there is not any business key
+--unique (PROC_DEF_ID_, BUSINESS_KEY_)
 
 create table ACT_RU_JOB (
     ID_ varchar(64) NOT NULL,
